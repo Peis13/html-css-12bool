@@ -1,23 +1,17 @@
-/* DEBUG */
-.debug .container {
+.debug .container,
+.debug [class*="col-"] {
   border: 1px solid black;
 }
+
+/* nested container */
 .debug [class*="col-"] > .container {
-  height: 100%;
   border: none;
 }
-.debug [class*="col-"] {
-  height: 200px;
-  padding: 5px;
-  border: 1px solid black;
-  background-color: pink;
+
+[class*="col-"] {
   position: relative;
 }
-.debug [class*="col-"] > .container [class*="col-"] {
-  height: 100%;
-  border: 1px solid white;
-  background-color: lightcoral;
-}
+
 span {
   text-align: center;
   position: absolute;
@@ -25,4 +19,3 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* END DEBUG */
